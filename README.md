@@ -19,13 +19,15 @@ key in the returned JSON describing the problem.
 
 #### POST /signups
 
+*This route is present for the signup of new users.*
+
 Params:
   * first: string
   * last: string
   * email: string
   * password: string
   
-Returns 201 Created on Success and 422 Unprocessable Entity in case fof failure.
+Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
 
 **Request:**
 
