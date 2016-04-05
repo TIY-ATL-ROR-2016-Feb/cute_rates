@@ -7,7 +7,7 @@ Welcome to cute rates, a service for rating cute things.
 ### Authorization
 
 All authorized requests unless otherwise mentioned require
-a "Auth-Token" header to be present. Users are assigned an
+a "**Auth-Token**" header to be present. Users are assigned an
 Auth Token during account creation.
 
 ### Errors
