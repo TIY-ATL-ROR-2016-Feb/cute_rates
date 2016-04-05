@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  validates :email, presence: true, format: {
-    with: /.+\@.+\..+/, message: "must have an @ symbol and period"
-  }
+  validates :email, presence: true, uniqueness: true,
+    format: {
+      with: /.+\@.+\..+/,
+      message: "must have an @ symbol and period"
+    }
   validates :auth_token, presence: true
 
   def ensure_auth_token
