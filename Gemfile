@@ -32,6 +32,12 @@ gem 'bcrypt', '~> 3.1.7'
 # Add CORS support so frontend can frontend use our lovely API.
 gem 'rack-cors', require: "rack/cors"
 
+# Add aws-sdk for communication with S3
+gem "aws-sdk", '< 2.0'
+
+# Add paperclip for managing attachments
+gem "paperclip"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -43,6 +49,8 @@ group :development, :test do
   gem 'byebug'
   # Pry is amazing. give it to me!
   gem 'pry'
+  # I hate exporting environment variables. Deal with it.
+  gem "dotenv-rails"
 end
 
 group :development do
