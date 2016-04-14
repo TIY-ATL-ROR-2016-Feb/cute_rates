@@ -22,6 +22,12 @@ class PostsController < ApplicationController
   end
 
   def index
+    @posts = Post.first(10)
+    render "index.json.jbuilder", status: :ok
+  end
 
+  def show
+    @post = Post.find(id: params[:id])
+    render json: { post: @post }, status: :ok
   end
 end

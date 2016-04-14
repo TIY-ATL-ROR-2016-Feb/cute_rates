@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "auth/test", to: "users#check_auth"
 
   post "posts", to: "posts#create"
+  get "posts", to: "posts#index"
+  get "posts/:id", to: "posts#show"
 
 
   # Example of regular route:
